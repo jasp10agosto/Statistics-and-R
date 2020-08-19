@@ -23,3 +23,19 @@ mean( x <= 60)- mean( x <= 40)
 ####Proportion in a range of years.
 plot(ecdf(x))
 
+###Building the function.
+prop = function (q) {
+  mean(x <= q)
+}
+##range of the qs to apply
+qs = seq(from=min(x), to=max(x), length=20)
+qs
+
+#using sapply to apply the prop to each qs
+props = sapply(qs, prop)
+props
+plot(qs,props)
+
+#pasting all together
+props = sapply(qs, function(q) mean(x <= q))
+props
