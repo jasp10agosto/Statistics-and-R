@@ -73,5 +73,12 @@ hist(dat[,4],
      main=paste0("Histogram of vector"," ", "4"))
   ##positive skew (a long tail to the right).
 
+##Vector 9
+  ##down shape in QQ plot.
+hist(dat[,9],
+     breaks=seq(floor(min(dat[,9])),ceiling(max(dat[,9]))),
+     main=paste0("Histogram of vector"," ", "9"))
+  ##negative skew (a long tail to the left)
+
 ##positive skew looks like an up-shaping curve in a qqnorm() plot,
 ##while negative skew looks like a down-shaping curve.
